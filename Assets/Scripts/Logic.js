@@ -4,10 +4,6 @@ $(document).ready(function () {
 });
 
 /**
- * Loads the nav bar references
-
-
-/**
  * Loads the contact image references
  */
 function LoadContactRefs() {
