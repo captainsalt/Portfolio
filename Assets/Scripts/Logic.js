@@ -1,11 +1,14 @@
 window.onload = function () {
     LoadContactRefs();
     LoadNavRefs();
+    ButtonHook();
 }
 
-
+/**
+ * Loads nav references
+ */
 function LoadNavRefs() {
-    var navItems = $("ul li a").get();
+    var navItems = $("nav ul li a").get();
 
     for (var i = 0; i < navItems.length; i++) {
         var element = navItems[i];
@@ -37,20 +40,21 @@ function LoadContactRefs() {
     }
 }
 
-//button logic
-$("button").mouseover(function () {
-    $(this).css("background", "#367c79");
-})
+function ButtonHook() {
+    //button events
+    $("button").mouseover(function () {
+        $(this).css("background", "#367c79");
+    })
 
-$("button").mouseout(function () {
-    $(this).css("background", "#4aaaa5");
-});
+    $("button").mouseout(function () {
+        $(this).css("background", "#4aaaa5");
+    });
 
-$("button").mousedown(function () {
-    $(this).css("background", "#102322");
-});
+    $("button").mousedown(function () {
+        $(this).css("background", "#102322");
+    });
 
-$("button").mouseup(function () {
-    $(this).css("background", "#4aaaa5");
-});
-
+    $("button").mouseup(function () {
+        $(this).css("background", "#4aaaa5");
+    });
+}
